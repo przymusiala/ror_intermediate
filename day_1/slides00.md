@@ -14,3 +14,4 @@
   * Przypomnienie i poprawma środowiska pracy
   * Własna wyszukiwarka
   * Autocomplete
+  * Przykłady zaawansowane

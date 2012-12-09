@@ -4,7 +4,7 @@
 
 <!SLIDE title-slide transition=fade>
 
-# Zadania dodatkowe
+# Przykłady zaawansowane
 
 <!SLIDE smaller bullets incremental transition=fade>
 
