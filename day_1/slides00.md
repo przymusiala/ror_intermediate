@@ -11,4 +11,6 @@
 
 # Plan na dziś #
   
-  * 
+  * Przypomnienie i poprawma środowiska pracy
+  * Własna wyszukiwarka
+  * Autocomplete
