@@ -17,12 +17,15 @@
 # Sprawdźmy to..
     
     $ rails g scaffold Product ...
+    $ rake db:migrate
     $ rake db:fixtures:load
     $ rais c
+    $ # rails g bootstrap:themed Products
+
 
 <!SLIDE smaller transition=fade>
 
-# Może w kontrollerze?
+# A może w kontrollerze?
 
     @@@ruby
       @products = Product.find(:conditions => 

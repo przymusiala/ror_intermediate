@@ -72,6 +72,8 @@
 
           @data = []
 
+          # Zbudujmy hash który zrozumie jQuery
+          
           list.each_hit_with_result do |hit, result|
             @data << {
               :label       => result.name,
