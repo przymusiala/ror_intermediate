@@ -13,13 +13,15 @@
 <!SLIDE smaller transition=fade>
 
     @@@ ruby
-      # Wszystkie posty z polem `text`(:name, :description, lub :comments) zawierające 'rubin'
+      # Wszystkie posty z polem `text`(:name, :description, 
+      # lub :comments) zawierające 'rubin'
       Post.search { fulltext 'rubin' }
 
 <!SLIDE smaller transition=fade>
 
     @@@ ruby
-      # Posty z rubinem, wyskoczą wyżej jeśli rubin pojawi się w nazwie
+      # Posty z rubinem, wyskoczą wyżej
+      # jeśli rubin pojawi się w nazwie
       
       Post.search do
         fulltext 'rubin' do
@@ -129,6 +131,9 @@
           end
         end
       end
+
+      # Albo te z blog_id = 1
+      # albo z blog_id = 2 i category_id = 3
 
 <!SLIDE smaller transition=fade>
 

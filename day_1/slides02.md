@@ -20,8 +20,17 @@
     $ rake db:migrate
     $ rake db:fixtures:load
     $ rais c
-    $ # rails g bootstrap:themed Products
 
+<!SLIDE small transition=fade>
+
+    @@@ ruby
+      # Gemfile
+
+      gem "twitter-bootstrap-rails"
+
+<!SLIDE commandline incremental transition=fade>
+    
+    $ rails g bootstrap:layout application fixed
 
 <!SLIDE smaller transition=fade>
 
@@ -115,7 +124,7 @@
       # app/controllers/products_controller.rb
       
       def index
-        @search = product.search do
+        @search = Product.search do
           fulltext params[:search]
         end
         @products = @search.results
@@ -156,7 +165,7 @@
       # app/models/product.rb
       
       class Product < ActiveRecord::Base
-        attr_accessible :name, :content, :published_at
+        attr_accessible :name, :content, :created_at
         has_many :comments
         
         searchable do
@@ -165,7 +174,7 @@
         end
         
       ➤  def publish_month
-      ➤    published_at.strftime("%B %Y")
+      ➤    created_at.strftime("%B %Y")
       ➤  end
         
       end

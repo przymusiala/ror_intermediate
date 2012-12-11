@@ -17,7 +17,7 @@
 
 # Aby pozbyć się polskich znaków
 
-<!SLIDE transition=fade>
+<!SLIDE smaller transition=fade>
 
     @@@ ruby
       ActiveSupport::Inflector.transliterate('Łódź')
@@ -38,12 +38,10 @@
 
     @@@ ruby
       # app/controllers/search_controller.rb
-
       class SearchController < ApplicationController
-
         layout nil
         respond_to :json
-
+        
         def index
           term       = ActiveSupport::Inflector.transliterate(
               params[:term]
@@ -51,8 +49,9 @@
           words      = term.split(/\s+/)
           prefix     = words.pop
           full_words = words.join(' ')
+          all_fields = [:name, :description, :...]
 
-          list = Sunspot.search(Products) do
+          list = Sunspot.search(Product) do
             keywords(full_words, :fields => all_fields)
             text_fields do |text_fields_query|
               text_fields_query.any_of do |any_of_query|
@@ -91,4 +90,5 @@
 <!SLIDE smaller transition=fade>
 
 # i w widoku
-## text\_field\_tag :term, params[:term], :autocomplete => search_path(:json)
+## = text\_field\_tag :term, params[:term], 
+## :'data-autocomplete' => search_path(:json)

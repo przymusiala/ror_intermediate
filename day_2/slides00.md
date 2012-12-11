@@ -6,4 +6,4 @@
 
 # Plan na dziś #
   
-  * 
+  * HAML
