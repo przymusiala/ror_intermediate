@@ -361,6 +361,6 @@
 
 <!SLIDE commandline incremental transition=fade>
 
-# Powinienem to pokazać na początku ;)
+# Powinniście to zobaczyć na początku ;)
 
     $ html2haml plik.html.erb plik.html.haml

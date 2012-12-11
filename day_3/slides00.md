@@ -6,4 +6,9 @@
 
 # Plan na dziś #
   
-  * 
+  * Prawa i obowiązki userów i adminów
+  * Poczekalnia obrazków
+  * Maile dla leniwych adminów
+  * Kategorie dla obrazków
+  * Komentarze z FB i ładne URL'e
+  * Logowanie przez zewnętrzną aplikację

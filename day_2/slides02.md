@@ -2,21 +2,45 @@
 
 # Część 2 #
 
-<!SLIDE title-slide transition=fade>
+<!SLIDE transition=fade>
 
-# 
+## Zróbmy swojego kwejko-demota
 
-apt-get install imagemagick librmagick-ruby libmagickwand-dev
+<!SLIDE transition=fade>
 
-RMagick gem install
+# Przygotujmy ImageMagick
 
-gem install rmagick
+<!SLIDE commandline incremental transition=fade>
 
-If you still facing problems with gem installation, Please look that following packages are installed
-on your system.
+    $ sudo apt-get install imagemagick
+    $ sudo apt-get install librmagick-ruby libmagickwand-dev
 
-dpkg -l | grep libmagickcore-dev graphicsmagick-libmagick-dev-compat
+<!SLIDE transition=fade>
 
-If there are no packages installed then try to install then first.
+    @@@ ruby
+      # Gemfile
+      
+      gem 'rmagick'
 
-apt-get install libmagickcore-dev graphicsmagick-libmagick-dev-compat
+<!SLIDE commandline incremental transition=fade>
+
+    $ bundle install
+
+<!SLIDE commandline incremental transition=fade>
+
+# Jesli to nie pomoże..
+
+    $ apt-get install libmagickcore-dev graphicsmagick-libmagick-dev-compat
+
+<!SLIDE smaller bullets incremental transition=fade>
+
+# Plan na aplikację
+  
+  * Jakie moduły?
+  * Jakie gemy?
+  * Jakie inne biblioteki?
+  * Jaka baza danych?
+
+<!SLIDE transition=fade>
+
+# Do dzieła!

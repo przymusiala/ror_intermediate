@@ -38,6 +38,11 @@
     $ rails new ror_intermediate -m \
     $   https://raw.github.com/RailsApps/rails-composer/master/composer.rb -T
 
+<!SLIDE small transition=fade>
+
+### Trzeba pamiętać jeszcze o uzupełnieniu Gemfile o odpowienie gemy 
+### jeśli chcemy użyć Twitter bootstrap czy Devise...
+
 <!SLIDE title-slide transition=fade>
 
 # Zmiana edytora

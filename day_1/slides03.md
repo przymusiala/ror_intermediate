@@ -19,6 +19,8 @@
 
 <!SLIDE smaller transition=fade>
 
+# Poprawmy w modelu indeksowanie
+
     @@@ ruby
       ActiveSupport::Inflector.transliterate('Łódź')
       # => 'Lodz'.downcase
@@ -92,3 +94,9 @@
 # i w widoku
 ## = text\_field\_tag :term, params[:term], 
 ## :'data-autocomplete' => search_path(:json)
+
+<!SLIDE smaller transition=fade>
+
+# Teraz pozostaje to tylko odpowiednio 
+# ostylować i dodać akcję w JSie żeby
+# kliknięcie przeniosło nas na odpowiedni URL
