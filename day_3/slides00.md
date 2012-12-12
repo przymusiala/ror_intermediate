@@ -55,6 +55,19 @@
         end
       end
 
+<!SLIDE smaller transition=fade>
+
+    @@@ ruby
+      # W kontrolerze należy uzupełnić zmienną @categories
+      # Formularz edycji zdjęcia
+      = form_for(@photo) do |f|
+        # .....
+        - for category in @categories
+          = check_box_tag "photo[category_ids][]",
+            "#{category.id}", 
+            @photo.categories.include?(category)
+          = category.name
+
 <!SLIDE transition=fade>
 
 # Komentarze z FB i ładne URL'e
