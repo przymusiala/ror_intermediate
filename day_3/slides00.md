@@ -22,13 +22,18 @@
 # Prawa i obowiązki userów i adminów
 ## [Cancan od Rayana] (https://github.com/ryanb/cancan)
 
-<!SLIDE transition=fade>
+<!SLIDE smaller transition=fade>
 
 # Poczekalnia obrazków
 ## Małe poprawki w modelu i dodanie [scope] (http://guides.rubyonrails.org/active_record_querying.html#scopes)'a
     
     @@@ ruby
-      scope :published, where(:published => true)
+      scope :published,   where(:published => true)
+      scope :unpublished, where(:published => false)
+
+<!SLIDE commandline incremental transition=fade>
+
+    $ rails g controller WaitingPhotos index
 
 <!SLIDE transition=fade>
 
