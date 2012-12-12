@@ -81,9 +81,9 @@
 
 # Zadania
 
-  * przejdż do application controllera
-  * stwórz kilka funkcji
-  * dodaj do każdej nazwy funkcji (a = 1) na końcu
-  * zmień (a = 1) na (@a = 1)
-  * zamień tekst podzielony w akapity w jeden długi tekst 
-  * zakomentuj wszystko i zwiększ wcięcie o dwie spacje
+  * Przejdż do application controllera
+  * Stwórz kilka funkcji
+  * Dodaj do każdej nazwy funkcji (a = 1) na końcu
+  * Zmień (a = 1) na (@a = 1)
+  * Zamień tekst podzielony w akapity w jeden długi tekst 
+  * Zakomentuj wszystko i zwiększ wcięcie o dwie spacje
