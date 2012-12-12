@@ -45,6 +45,16 @@
 # Kategorie dla obrazków
 ## Podzielmy na kategorie, dodajmy TOP wyświetleń
 
+<!SLIDE smaller transition=fade>
+
+    @@@ ruby
+      def self.up
+        create_table 'categories_photos', :id => false do |t|
+          t.integer :category_id, :null => false
+          t.integer :photo_id,    :null => false
+        end
+      end
+
 <!SLIDE transition=fade>
 
 # Komentarze z FB i ładne URL'e
