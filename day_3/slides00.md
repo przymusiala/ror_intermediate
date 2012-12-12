@@ -49,3 +49,18 @@
 
 # Komentarze z FB i ładne URL'e
 ## bez [friendly_id] (https://github.com/norman/friendly_id) ani rusz.
+
+<!SLIDE smaller transition=fade>
+
+    @@@ ruby
+      #fb-root
+        %script{ :src => 
+          "https://connect.facebook.net/pl_PL/all.js#xfbml=1"
+        }
+        %fb:comments{ :href => 
+          "#{ActiveSupport::Inflector.transliterate(
+              CGI::unescape(request.url)
+            ).gsub('http://www.', 'http://').gsub(
+              /\?.+\z/, ''
+            )}",
+          :width =>'600' }
