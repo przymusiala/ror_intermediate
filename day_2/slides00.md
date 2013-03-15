@@ -7,4 +7,4 @@
 # Plan na dziś #
   
   * HAML
-  * Własna kwejko-demot
+  * Własny kwejko-demot

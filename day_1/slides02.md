@@ -209,6 +209,7 @@
           text :comments do
             # to są komentarze do danego produktu
         ➤  comments.map(&:content)
+            # comments.map{|comment| comment.content }
           end
         end
         
