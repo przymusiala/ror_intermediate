@@ -6,8 +6,8 @@
 
 # Plan na dziś #
   
-  * Dobre praktyki
   * Podział na moduły
+  * Dobre praktyki
   * Generowanie sitemap
   * A może mongoDB?
   * Metaprogramowanie
@@ -15,11 +15,11 @@
 
 <!SLIDE smaller transition=fade>
 
-# Dobre praktyki
+# Podział na moduły
 
 <!SLIDE smaller transition=fade>
 
-# Podział na moduły
+# Dobre praktyki
 
 <!SLIDE smaller transition=fade>
 
