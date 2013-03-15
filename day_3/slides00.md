@@ -15,7 +15,6 @@
   * Maile dla leniwych adminów
   * Kategorie dla obrazków
   * Komentarze z FB i ładne URL'e
-  * Logowanie przez zewnętrzną aplikację
 
 <!SLIDE transition=fade>
 
@@ -40,10 +39,36 @@
 # Maile dla leniwych adminów
 ## Czyli [Emacsem przez sendmail] (http://www.youtube.com/watch?v=wFXLzr86MQ4)
 
+<!SLIDE smaller bullets incremental transition=fade>
+
+# TOP wyświetleń
+  * Dodajmy pole visits do modelu Photo 
+  * Zinkrementujmy licznik przy każdym wyświetleniu
+  * Dodajmy kontroler dla najpopularniejszych obrazków
+
+<!SLIDE transition=fade>
+
+# Komentarze z FB i ładne URL'e
+## bez [friendly_id] (https://github.com/norman/friendly_id) ani rusz.
+
+<!SLIDE smaller transition=fade>
+
+    @@@ ruby
+      #fb-root
+        %script{ :src => 
+          "https://connect.facebook.net/pl_PL/all.js#xfbml=1"
+        }
+        %fb:comments{ :href => 
+          "#{ActiveSupport::Inflector.transliterate(
+              CGI::unescape(request.url)
+            ).gsub('http://www.', 'http://').gsub(
+              /\?.+\z/, ''
+            )}",
+          :width =>'600' }
+
 <!SLIDE transition=fade>
 
 # Kategorie dla obrazków
-## Podzielmy na kategorie, dodajmy TOP wyświetleń
 
 <!SLIDE smaller transition=fade>
 
@@ -68,22 +93,6 @@
             @photo.categories.include?(category)
           = category.name
 
-<!SLIDE transition=fade>
-
-# Komentarze z FB i ładne URL'e
-## bez [friendly_id] (https://github.com/norman/friendly_id) ani rusz.
-
 <!SLIDE smaller transition=fade>
-
-    @@@ ruby
-      #fb-root
-        %script{ :src => 
-          "https://connect.facebook.net/pl_PL/all.js#xfbml=1"
-        }
-        %fb:comments{ :href => 
-          "#{ActiveSupport::Inflector.transliterate(
-              CGI::unescape(request.url)
-            ).gsub('http://www.', 'http://').gsub(
-              /\?.+\z/, ''
-            )}",
-          :width =>'600' }
+  
+# Oddzielna akcja w kontrolerze na obrazki z różnych kategorii
