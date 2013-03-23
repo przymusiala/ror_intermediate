@@ -37,12 +37,12 @@
 # A może w kontrollerze?
 
     @@@ruby
-      @products = Product.find(:conditions => 
+      @products = Product.find(:all, :conditions => 
         ['name LIKE ?', params[:name]]) # uwaga na sql-injection
 
 <!SLIDE small bullets incremental transition=fade>
 
-# Czy aby na pweno?
+# Czy aby na pewno?
 
   * co jak mielibyśmy pominąć znaczenie wielkości znaków (i pominąć polskie znaki)?
   * co jak byśmy chcieli SZYBKO przeszukać wszystkie recenzje do danego produktu?
@@ -70,6 +70,7 @@
     
     $ rake sunspot:solr:start
     # Tutaj przyda się Java
+    $ sudo apt-get install openjdk-6-jdk
 
 <!SLIDE transition=fade>
 

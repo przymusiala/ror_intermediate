@@ -15,6 +15,13 @@
     $ sudo apt-get install imagemagick
     $ sudo apt-get install librmagick-ruby libmagickwand-dev
 
+<!SLIDE smaller commandline incremental transition=fade>
+
+# Nowa aplikacja
+
+    $ rails new kwejkodemot -m \
+    $   https://raw.github.com/RailsApps/rails-composer/master/composer.rb -T
+
 <!SLIDE transition=fade>
 
     @@@ ruby

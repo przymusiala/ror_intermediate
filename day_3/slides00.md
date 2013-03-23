@@ -39,6 +39,23 @@
 # Maile dla leniwych adminów
 ## Czyli [Emacsem przez sendmail] (http://www.youtube.com/watch?v=wFXLzr86MQ4)
 
+<!SLIDE transition=fade>
+
+    $ rails generate mailer UserMailer
+
+<!SLIDE smaller transition=fade>
+
+    @@@ ruby
+      class UserMailer < ActionMailer::Base
+        default :from => "notifications@example.com"
+       
+        def welcome_email(user)
+          @user = user
+          @url  = "ulr do naszego obrazka"
+          mail(:to => user.email, :subject => "Dodano nowy obrazek!1!!one")
+        end
+      end
+
 <!SLIDE smaller bullets incremental transition=fade>
 
 # TOP wyświetleń
